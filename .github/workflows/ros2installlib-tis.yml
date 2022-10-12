@@ -10,8 +10,8 @@ defaults:
 
 # For more details, see https://github.com/docker/build-push-action
 jobs:
-  ros2installlib:
-    name: Ros2installlib
+  ros2installlib_amd64:
+    name: ros2installlib_amd64
     runs-on: ubuntu-20.04
     steps:
       -
@@ -30,10 +30,10 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          target: ros2installlib
+          target: ros2installlib_amd64
           platforms: linux/amd64
           push: true
-          tags: qubo188612/ubuntu20.04:ros2installlib
-          cache-from: type=registry,ref=qubo188612/ubuntu20.04:ros2installlib
+          tags: qubo188612/ubuntu20.04:ros2installlib_amd64
+          cache-from: type=registry,ref=qubo188612/ubuntu20.04:ros2installlib_amd64
           cache-to: type=inline
   

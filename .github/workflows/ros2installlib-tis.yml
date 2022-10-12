@@ -10,7 +10,7 @@ defaults:
 
 # For more details, see https://github.com/docker/build-push-action
 jobs:
-  ros2installlib_amd64:
+  ros2installlib:
     name: ros2installlib
     runs-on: ubuntu-20.04
     steps:
